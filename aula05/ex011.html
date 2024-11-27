@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>De onde você é?</h1>
+    <label for="inac">País: </label>
+    <input type="text" name="nac" id="inac">
+    <input type="button" value="Enviar" onclick="calcular()">
+    <div id="nac"></div>
+
+    <script>
+       
+        function calcular() {
+            var input = document.getElementById('inac')
+            var nac = document.querySelector('div#nac')
+            var pais = input.value.trim()
+            nac.innerHTML = `<p>Vivendo no(a) ${pais}</p>`
+            if (pais.toLowerCase() == 'brasil') {
+                nac.innerHTML += `<p>Você é brasileiro(a)</p>`
+            } else {
+                nac.innerHTML += `<p>Você é estrangeiro(a)</p>`
+            }
+        }
+
+    </script>
+</body>
+</html>
