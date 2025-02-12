@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let object = {
+            String: "Hello World",
+            Number: 42,
+            Boolean: true,
+            Array: ["array"],
+            objectInterno: {objetoInterno: "objetoInterno"}
+        }
+
+        console.log(object.objectInterno);
+
+        var Number = object.Number;
+        console.log(Number);
+
+        var {String, Boolean, objectInterno} = object;
+        console.log(String, Boolean, objectInterno);
+    </script>
+</body>
+</html>

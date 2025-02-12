@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <h1>Hello World</h1>
     <script>
         try{
 
-        } catch (erro) {
+            console.log("Consultando banco de dados...")
+            throw new Error("Erro de conexão com banco de dados.") 
+
+        } catch (error) {
+
+            alert("Erro de execução genérico. Por favor, fale com o suporte.")
+            console.error(error)
 
         } finally{
-            
+            console.log("Finalizando a execução do script.")
         }
     </script>
 </body>
